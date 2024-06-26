@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, Routes } from 'react-router-dom';
 import Login from './Authentication/Login'
 import Header from './CommonComponents/Header';
-import ProductManagement from './EMP/pages/ProductManagement';
+import ProductManagement from './CEO & HR/pages/ProductManagement';
 import TimeSheet from './EMP/pages/TimeSheet';
 
 function App() {
