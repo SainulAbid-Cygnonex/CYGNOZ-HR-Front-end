@@ -94,9 +94,9 @@ const Login = () => {
                 label="User Type"
                 required
               >
-                <MenuItem value="CEO">CEO</MenuItem>
                 <MenuItem value="Emp">Employee</MenuItem>
                 <MenuItem value="HR">HR</MenuItem>
+                <MenuItem value="CEO">CEO</MenuItem>
               </Select>
             </FormControl>
             {error && (
