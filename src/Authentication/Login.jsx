@@ -52,8 +52,8 @@ const Login = () => {
     <div className="flex justify-center items-center min-h-screen login-background">
       <Container maxWidth="sm">
         <Box className="bg-white rounded-lg" sx={{ mt: 8, py: 4, px: 3, boxShadow: 3 }}>
-          <Typography variant="h4" component="h1" align="center" gutterBottom>
-            CYGNOZ HR and Talent Portal
+          <Typography style={{fontWeight:'bolder',fontStyle:'italic'}} variant="h4" component="h1" align="center" gutterBottom>
+          CYGSphere
           </Typography>
           <form onSubmit={handleLogin}>
             <TextField
