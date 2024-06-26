@@ -48,9 +48,10 @@ const Login = () => {
   };
 
   return (
-    <div className="login-background">
+    <>
+    <div className="flex justify-center items-center min-h-screen login-background">
       <Container maxWidth="sm">
-        <Box className="login-container" sx={{ mt: 8, py: 4, px: 3, boxShadow: 3 }}>
+        <Box className="bg-white rounded-lg" sx={{ mt: 8, py: 4, px: 3, boxShadow: 3 }}>
           <Typography variant="h4" component="h1" align="center" gutterBottom>
             CYGNOZ HR and Talent Portal
           </Typography>
@@ -117,6 +118,7 @@ const Login = () => {
         </Box>
       </Container>
     </div>
+    </>
   );
 };
 

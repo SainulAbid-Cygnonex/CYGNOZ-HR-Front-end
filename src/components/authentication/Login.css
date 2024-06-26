@@ -1,19 +1,7 @@
 
-
 .login-background {
     background-image: url('../../assets/Images/companyBG.jpg');
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
-  .login-container {
-    background-color: white;
-    border-radius: 8px;
-  }
   
-  body {
-    font-family: 'Roboto', sans-serif; /* Replace with chosen Google Font */
-  }
   
