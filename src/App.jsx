@@ -1,9 +1,9 @@
 import React from 'react';
 import { Router, Route, Routes } from 'react-router-dom';
-import Login from './components/authentication/Login';
-import Header from './components/Header';
-import ProductManagement from './pages/ProductManagement';
-import TimeSheet from './components/TimeSheet';
+import Login from './Authentication/Login'
+import Header from './CommonComponents/Header';
+import ProductManagement from './EMP/pages/ProductManagement';
+import TimeSheet from './EMP/pages/TimeSheet';
 
 function App() {
  
@@ -13,9 +13,15 @@ function App() {
     <Header />
     <Routes>
       <Route path="/"  element={<Login/>} />
+      {/* Employee routes */}
       <Route path="/timesheet"  element={<TimeSheet/>} />
       <Route path="/products"  element={<ProductManagement/>} />
-      {/* Add routes for other components like Dashboard here */}
+
+
+      
+      {/* CEO or HR routes  */}
+
+
     </Routes>
     </>
   )

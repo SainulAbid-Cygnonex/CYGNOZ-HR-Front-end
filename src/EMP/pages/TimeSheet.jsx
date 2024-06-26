@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import {
-    
     InputLabel,
     FormControl,
     Select,
@@ -41,6 +40,7 @@ function TimeSheet() {
               >
                 <MenuItem value="technical">Technical</MenuItem>
                 <MenuItem value="non-technical">Non-Technical</MenuItem>
+                
               </Select>
               </FormControl>
               <Button variant='contained'>Add +</Button>
