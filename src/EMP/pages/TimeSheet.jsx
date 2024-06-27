@@ -5,9 +5,9 @@ import {
     FormControl,
     Select,
     MenuItem,
-    Button
+    Button 
   } from '@mui/material';
-
+import CommonButton from '../../CommonComponents/CommonButton';
 
 function TimeSheet() {
 
@@ -26,7 +26,7 @@ function TimeSheet() {
 
   return (
     <>
-      <div className='text-3xl font-bold text-center mt-5'>Time Sheet</div>
+      <div className='text-4xl font-bold text-center mt-5'>Time Sheet</div>
       <div >
         <h3 className='text-lg my-5 mx-5'>
           Welcome <span className='text-blue-500 font-bold'>Employee</span> ,
@@ -34,7 +34,7 @@ function TimeSheet() {
       </div>
       <div className="mx-5">
        
-        <div className='flex justify-between gap-10'>
+        <div className='flex justify-between '>
         <FormControl variant="outlined" fullWidth style={{width:"200px"}}>
         <InputLabel id="user-type-label">Type</InputLabel>
             <Select
@@ -44,13 +44,16 @@ function TimeSheet() {
                 onChange={handleTypeChange}
                 label="technical-type"
                 required
+                size='small'
               >
                 <MenuItem value="technical" onClick={handleTechnical}>Technical</MenuItem>
                 <MenuItem value="non-technical" onClick={handleNonTechnical}>Non-Technical</MenuItem>
                 
               </Select>
               </FormControl>
-              <Button variant='contained'>Add +</Button>
+              <div>
+              <CommonButton >Add +</CommonButton>
+              </div>
         </div>
       {technical?
       

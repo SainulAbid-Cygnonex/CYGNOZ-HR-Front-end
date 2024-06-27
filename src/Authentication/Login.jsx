@@ -52,8 +52,8 @@ const Login = () => {
     <div className="flex justify-center items-center min-h-screen login-background">
       <Container maxWidth="sm">
         <Box className="bg-white rounded-lg" sx={{ mt: 8, py: 4, px: 3, boxShadow: 3 }}>
-          <Typography variant="h4" component="h1" align="center" gutterBottom>
-            CYGNOZ HR and Talent Portal
+          <Typography style={{fontWeight:'bolder',fontStyle:'italic'}} variant="h4" component="h1" align="center" gutterBottom>
+          CYGSphere
           </Typography>
           <form onSubmit={handleLogin}>
             <TextField
@@ -94,9 +94,9 @@ const Login = () => {
                 label="User Type"
                 required
               >
-                <MenuItem value="CEO">CEO</MenuItem>
                 <MenuItem value="Emp">Employee</MenuItem>
                 <MenuItem value="HR">HR</MenuItem>
+                <MenuItem value="CEO">CEO</MenuItem>
               </Select>
             </FormControl>
             {error && (

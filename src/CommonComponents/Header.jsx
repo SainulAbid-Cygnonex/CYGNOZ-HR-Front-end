@@ -5,7 +5,7 @@ function Header() {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          CYGNOZ HR and Talent Portal
+       <h1 className='italic text-bl font-bold text-xl'>CYG<span className=' font-extrabold'>Sphere</span></h1>
         </Typography>
       </Toolbar>
     </AppBar>
