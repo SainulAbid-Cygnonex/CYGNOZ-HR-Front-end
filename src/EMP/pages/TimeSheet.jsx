@@ -10,11 +10,19 @@ import CommonButton from '../../CommonComponents/CommonButton';
 
 function TimeSheet() {
 
+    const [technical,setTechnical]=useState(true)
     const [technicalType, setTechnicalType] = useState('technical');
 
     const handleTypeChange = (event) => {
         setTechnicalType(event.target.value);
       };
+
+      const handleTechnical =()=>{
+        setTechnical(true)
+      }
+      const handleNonTechnical =()=>{
+        setTechnical(false)
+      }
 
   return (
     <>
@@ -38,8 +46,8 @@ function TimeSheet() {
                 required
                 size='small'
               >
-                <MenuItem value="technical">Technical</MenuItem>
-                <MenuItem value="non-technical">Non-Technical</MenuItem>
+                <MenuItem value="technical" onClick={handleTechnical}>Technical</MenuItem>
+                <MenuItem value="non-technical" onClick={handleNonTechnical}>Non-Technical</MenuItem>
                 
               </Select>
               </FormControl>
@@ -48,38 +56,68 @@ function TimeSheet() {
               </div>
         </div>
 
+       {
+        technical?
         <div className='table-timeheet mt-10'>
-          <table className="min-w-full divide-y divide-gray-200 shadow-2xl rounded-lg">
-            <thead className="bg-gray-300">
-              <tr>
-                <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">#</th>
-                <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">Product Name</th>
-                <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">Hours/day</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black">SEWNEX</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  <input type="number" min={0} max={8} className="border border-black rounded p-1" />
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black ">Billbizz</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  <input type="number" min={0} max={8} className="border border-black rounded p-1" />
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-500"></td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table className="min-w-full divide-y divide-gray-200 shadow-2xl rounded-lg">
+          <thead className="bg-gray-300">
+            <tr>
+              <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">#</th>
+              <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">Product Name</th>
+              <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">Hours/day</th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            <tr>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black">SEWNEX</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <input type="number" min={0} max={8} className="border border-black rounded p-1" />
+              </td>
+            </tr>
+            <tr>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black ">Billbizz</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <input type="number" min={0} max={8} className="border border-black rounded p-1" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      :
+      <div className='table-timeheet mt-10'>
+      <table className="min-w-full divide-y divide-gray-200 shadow-2xl rounded-lg">
+        <thead className="bg-gray-300">
+          <tr>
+            <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">#</th>
+            <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">STAND UPS </th>
+            <th scope="col" className="px-6 py-3 text-left text-md font-bold text-black uppercase tracking-wider">MEETINGS</th>
+          </tr>
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-200">
+          <tr>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black">Updating..</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              {/* <input type="number" min={0} max={8} className="border border-black rounded p-1" /> */}
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black">Updating..</td>
+
+            </td>
+          </tr>
+          <tr>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black ">Updating..</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              {/* <input type="number" min={0} max={8} className="border border-black rounded p-1" /> */}
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-black">Updating..</td>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+       }
         <div className='flex justify-end mt-6'>
          <CommonButton color='success'>Submit</CommonButton>
         </div>
