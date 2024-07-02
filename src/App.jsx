@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Routes } from 'react-router-dom';
+import { Router, Route, Routes, useLocation } from 'react-router-dom';
 import Login from './Authentication/Login'
 import Header from './CommonComponents/Header';
 import ProductManagement from './CEO & HR/pages/ProductManagement';
@@ -9,11 +9,14 @@ import EventsHolidaysView from './EMP/pages/EventsHolidaysView';
 
 
 function App() {
+  
+  const location = useLocation();
  
 
   return (
     <>
-    <Header />
+
+{location.pathname !== "/adhome" && <Header />}
     <Routes>
       <Route path="/"  element={<Login/>} />
       {/* Employee routes */}
@@ -27,7 +30,7 @@ function App() {
 
       
       {/* CEO or HR routes  */}
-      <Route path="/home"  element={<Home/>} />
+      <Route path="/adhome"  element={<Home/>} />
 
     </Routes>
     </>
