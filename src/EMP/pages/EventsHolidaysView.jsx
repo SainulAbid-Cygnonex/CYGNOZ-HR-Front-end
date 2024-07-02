@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tooltip, Typography, Box, TextField } from '@mui/material';
+import { Tooltip, Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -16,6 +16,17 @@ const CalendarContainer = styled(Box)({
   '.react-calendar': {
     width: '100%',
   },
+  '.react-calendar__navigation__arrow': {
+    fontSize: '32px', // Adjust the font size to make buttons larger
+    lineHeight: '24px', // Adjust the line height if needed
+    padding: '8px', // Increase padding for larger clickable area
+  },
+  '.react-calendar__month-view__weekdays': {
+    backgroundColor: 'gray'
+  },
+  '.react-calendar__tile abbr': {
+    display: 'none', // Hides the default dates
+  }
 });
 
 const DayBox = styled(Box)(({ theme, isHoliday, isEvent }) => ({
@@ -28,6 +39,7 @@ const DayBox = styled(Box)(({ theme, isHoliday, isEvent }) => ({
   borderRadius: '8px',
   cursor: 'pointer',
   boxShadow: '0px 3px 6px rgba(0,0,0,0.1)',
+  fontWeight: 'bold', // Increased font boldness
 }));
 
 const annualLeaves = {
@@ -78,7 +90,7 @@ const EventsHolidaysView = () => {
 
     return (
       <Tooltip
-        key={date}
+        key={dayKey}
         title={isHoliday ? annualLeaves[dayKey] : isEvent ? events[dayKey] : ''}
         placement="top"
         arrow
@@ -118,7 +130,7 @@ const EventsHolidaysView = () => {
           }}
         />
       </CalendarContainer>
-      <Box mt={4} display="flex" flexDirection="column" alignItems="center">
+      {/* <Box mt={4} display="flex" flexDirection="column" alignItems="center">
         <TextField
           label="Event Date (MM-DD)"
           value={eventDate}
@@ -129,7 +141,7 @@ const EventsHolidaysView = () => {
         <TextField
           label="Event Name"
           value={eventName}
-          onChange={(e) => setEventName(e.target.value)}
+          onChange={(e) => setEventName(e.target.value)}                
           margin="normal"
           variant="outlined"
           style={{ marginTop: '16px' }}
@@ -142,7 +154,8 @@ const EventsHolidaysView = () => {
         >
           Add Event
         </CommonButton>
-      </Box>
+      </Box> */}                     
+      {/* temporarily commented as adding events Can only be done by HR */}
     </Container>
   );
 };
