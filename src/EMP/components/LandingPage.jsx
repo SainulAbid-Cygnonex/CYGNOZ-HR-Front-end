@@ -27,11 +27,11 @@ function LandingPage() {
     <>
     <Header insideEmpLandingpage/>
     <div>
-        <Container maxWidth="lg" className='pt-20'>
+        <Container maxWidth="xl" className='pt-20 px-96'>
         <Box>
             <Grid container spacing={2}>
 
-                <Grid item xs={7}>
+                <Grid item xs={6}>
                 <Item>
                     <div className='text-2xl font-black'>Welcome employee!</div>
                     <div className='text-5xl mt-8 font-black'>Manage Your Attendance Seamlessly</div>
@@ -89,7 +89,7 @@ function LandingPage() {
                 
 
 
-                <Grid item xs={5}>
+                <Grid item xs={6}>
                 <Item>
                     <Box sx={{ width: screen, borderRadius: 1 }}>
                         <img src={emp} className='h-full w-full rounded-lg' alt="" />
