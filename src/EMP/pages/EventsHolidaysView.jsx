@@ -15,6 +15,7 @@ const Container = styled(Box)({
 const CalendarContainer = styled(Box)({
   '.react-calendar': {
     width: '100%',
+    boxShadow: 'rgb(38, 57, 77) 0px 20px 30px -10px;'
   },
   '.react-calendar__navigation__arrow': {
     fontSize: '32px', // Adjust the font size to make buttons larger
