@@ -36,7 +36,7 @@ function Home() {
             <ul>
               {['Dashboard', 'Products', 'Employee', 'Interns', 'Attendance'].map((item, index) => (
                 <li key={index}>
-                  <a href="#" className="hover:bg-blue-500 p-5 block rounded flex items-center">
+                  <a href="#" className="hover:bg-blue-500 p-5 block rounded items-center">
                     <i className={`fa-solid ${iconClasses[item]}`}></i>
                     {isSidebarOpen && <span className="ml-4 font-bold">{item}</span>}
                   </a>
