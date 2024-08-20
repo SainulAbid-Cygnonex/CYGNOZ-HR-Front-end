@@ -15,7 +15,7 @@ function Header({insideEmpLandingpage}) {
         </Typography>
         {
           insideEmpLandingpage &&
-          <Button variant="contained" size="small" style={{backgroundColor:'red', color:'white', fontWeight:'900'}}>Logout</Button>
+          <Button variant="contained" size="small" style={{backgroundColor:'red', color:'gray', fontWeight:'900'}}>Logout</Button>
         }
       </Toolbar>
     </AppBar>
